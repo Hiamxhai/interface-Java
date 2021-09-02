@@ -1,0 +1,30 @@
+package hei;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class hei {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Nhập vào số nguyên dương bất kì");
+		
+		int n = scanner.nextInt();
+		
+		Stack<Integer> a = new Stack<>();
+		
+		while (n > 0) {
+			a.push(n % 2);
+			n /= 2;
+		}
+		while (a.empty() == false) {
+			System.out.println(a.pop());
+		}
+		
+		
+	}
+
+}
