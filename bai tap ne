@@ -1,0 +1,80 @@
+//bai 1 
+//		
+//		System.out.println("nhập độ dài của mảng : ");
+//		
+//		int n = scanner.nextInt();
+//		
+//		int a[] = new int[n];
+//		
+//		//nhap mang
+//		
+//		System.out.println("nhập mảng");
+//		for (int i = 0; i < a.length; i++) {
+//			System.out.println("a [" +i+ "] = ");
+//			a[i] = scanner.nextInt();
+//		}
+//		int min = a[0];
+//		for (int i = 0; i < a.length; i++) {
+//			if(a[i] < min) {
+//				min = a[i];
+//			}
+//			
+//		}
+//		//in ra mang ban dau 
+//		System.out.println("mang ban dau");
+//		for (int i = 0; i < a.length - 1; i++) {
+//			System.out.println(a[i] + "\t");
+//			
+//		}
+//		for (int i = 0; i < a.length; i++) {
+//			for (int j = i+1; j < a.length; j++) {
+//				if (a[i] < a[j]) {
+//					int tg = a[i];
+//					a[i] = a[j];
+//					a[j] = tg;
+//				}  
+//			}
+//		}
+//		System.out.println("gia tri min la " + min);
+//	//in ra man hinh mang vua sap xep
+//		System.out.println("\n mang da sap xep :");
+//		for (int i = 0; i < n; i++) {
+//			System.out.println(a[i] + "\t");
+//		}
+		
+		
+		
+		
+		//bai 2 
+		System.out.println("---Tạo Menu---");
+		System.out.println(" 1 .cộng");
+		System.out.println(" 2.trừ");
+		System.out.println(" 3.nhân");
+		System.out.println(" 4.chia");
+		
+		System.out.println("Ấn từ 1 đến 4  để chọn phép tính : ");
+		int x = scanner.nextInt();
+	System.out.println("nhập vào số thứ 1 : ");
+	int c = scanner.nextInt();
+	System.out.println("Nhập vào số thứ 2 : ");
+	int d = scanner.nextInt();
+	tong(c,d);hieu(c,d);
+	tich(c, d);thuong(c, d);
+	 
+	switch (x) {
+	case 1:
+		System.out.println("Phếp cộng có kết quả là :" +tong(c, d));
+		break;
+
+	case 2:
+		System.out.println("phép trừ có kết quả là : " + hieu(c, d));
+		break;
+	case 3:
+		System.out.println("phép nhân có kết quả là : " + tich(c, d));
+		break;
+	case 4:
+		System.out.println("phép chia có kết quả là : " + thuong(c, d));
+		break;
+		
+		default : System.out.println("bạn chỉ chọn từ 1 đén 4");
+	}
